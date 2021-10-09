@@ -1,0 +1,2 @@
+.text{text-align:center;text-transform:uppercase;margin-top:200px;color:#1f3282;font-size:30px}.btn{display:flex;justify-content:center}button[data-action=start]{cursor:pointer;margin-right:20px;padding:20px 40px;border-radius:2px;border:none;background:#ff0;color:#1f3282}button[data-action=start]:hover{background:orange}button[data-action=stop]{cursor:pointer;padding:20px 40px;border-radius:2px;border:none;background:#ff0;color:#d51db8}button[data-action=stop]:hover{background:orange}
+/*# sourceMappingURL=/goit-js-hw-11-color-switch/src.6be6e77f.css.map */
