@@ -1,4 +1,5 @@
 import './sass/main.scss';
+
 const colors = [
   '#FFFFFF',
   '#2196F3',
@@ -18,10 +19,20 @@ const refs = {
     stopBtnRef: document.querySelector('[data-action="stop"]')
 };
 
-
+let timerId = null;
 refs.startBtnRef.addEventListener('click', onStartBtnClick);
 refs.stopBtnRef.addEventListener('click', onStopBtnClick);
 
-function onStartBtnClick() {}
+function onStartBtnClick() {
+  timerId = setInterval(() => {
+    const randomColor = randomIntegerFromInterval(0, colors.length - 1)
+    document.body.style.backgroundColor = colors[randomColor]
+    refs.startBtnRef.disable = true
+}, 1000)
+}
 
-function onStopBtnClick() {}
+function onStopBtnClick() {
+  clearInterval(timerId)
+  refs.startBtnRef.disable = false
+ }
+
